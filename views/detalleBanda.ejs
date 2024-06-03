@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Detalle Banda</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= banda.nombre %></h1>
+
+    <%- include('./partials/menu.ejs') %>
+
+    <ul>
+        <% bandas.forEach(banda => { %>
+        <li>
+            <a href="/bandas/<%= banda.id %>"> <%= banda.nombre %></a></li>
+        <% }); %>
+    </ul>
+
+  </body>
+</html>
