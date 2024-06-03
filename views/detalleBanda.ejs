@@ -5,16 +5,22 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= banda.nombre %></h1>
 
     <%- include('./partials/menu.ejs') %>
 
-    <ul>
-        <% bandas.forEach(banda => { %>
-        <li>
-            <a href="/bandas/<%= banda.id %>"> <%= banda.nombre %></a></li>
-        <% }); %>
-    </ul>
-
+    <h1><%= banda.nombre %></h1>
+    <p>Genero: 
+        <a href="/bandas/genero/<%= banda.genero %>"> <%= banda.genero %> 
+        </a>
+    </p>
+    <p>Cantidad de Integrantes: <%= banda.integrantes %></p>
+    <p><img src="/<%= banda.cover %>" alt="<%= banda.nombre %>"></p>
+    <p>Mejores Canciones: 
+        <ul>
+            <% banda.topCanciones.forEach(cancion => { %>
+              <li><%= cancion %></li>
+            <% }); %>
+          </ul>
+    </p>
   </body>
 </html>

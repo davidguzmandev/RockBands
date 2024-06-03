@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Genero Banda</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <%- include('./partials/menu.ejs') %>
+
+    <% if (bandas.length > 0) { %>
+        
+    <h1>Bandas de género: <%= genero %></h1>
+    <ul>
+        <% bandas.forEach(bandas => { %>
+            <li> <a href="/bandas/<%= bandas.id %>"> <%= bandas.nombre %> </a></li>
+        <% }); %>
+    </ul>
+
+    <% } else{ %>
+        <p>No hay bandas de este genero</p>
+    <% } %>
+    
+  </body>
+</html>
