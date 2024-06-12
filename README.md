@@ -1,3 +1,4 @@
 ### EJS Practice
 
-Working with EJS, JavaScript, CSS, HTML and Express
+Working with EJS, JavaScript, CSS, HTML and Express.
+Use of routes and controllers.
